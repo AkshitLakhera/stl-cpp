@@ -5,6 +5,8 @@
 #include <stack>
 #include <queue>
 #include <set>
+#include <unordered_set>
+#include <map>
 using namespace std;
 // Iterators
 int main()
@@ -205,4 +207,51 @@ void explainMultiSet()
     // ms.erase(ms.find(1), ms.find(1) + 2);
     //  will remove all element in  btw
     //  restt all are same
+}
+
+// unodered set
+void explainUSet()
+{
+    unordered_set<int> st;
+    // lower bound  and upper bound function does not work , rest all functions are same
+    //  as above ,it does not stores  in any
+    // particular  order  it has a better  complexity
+    // than set  in most  cases ,except some when collision happens.
+}
+
+// map
+void explainMap()
+{
+    // Map with integer keys and integer values
+    map<int, int> mpp1; // Map where both key and value are integers
+    mpp1[1] = 2;
+    mpp1.insert({2, 4});
+    mpp1.emplace(3, 1);
+
+    // Map with integer keys and pair<int, int> values
+    map<int, pair<int, int>> mpp2;
+    mpp2[1] = {10, 20};
+    mpp2.emplace(2, make_pair(30, 40));
+    mpp2.insert({3, {50, 60}});
+
+    // Map with pair<int, int> keys and integer values
+    map<pair<int, int>, int> mpp3;
+    mpp3[{1, 2}] = 10;
+    mpp3[{2, 3}] = 20;
+    mpp3.insert({{3, 4}, 30});
+    // suppose the  map array is [{1,2} ,{3,4},{3,1}]
+    for (auto it : mpp3)
+    {
+        //     cout << it.first << " " << it.second << endl ;
+
+        // cout << mpp3[1]; //here it will print 2 and 1 corressponds to 2
+        // auto it = mpp3.find(3);
+        // cout << *(it).second; // it will answer 1
+        // auto it = mpp3.find(5); //mpp3.end() as it is not present in the map array
+
+        // //this is the syntax
+        //  auto it =  mpp.lowerbound(2);
+        //  auto it =  mpp.upper_bound(3);
+        // erase,swap,size,empty  are same as above
+    }
 }
