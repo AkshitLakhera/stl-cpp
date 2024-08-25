@@ -252,6 +252,51 @@ void explainMap()
         // //this is the syntax
         //  auto it =  mpp.lowerbound(2);
         //  auto it =  mpp.upper_bound(3);
-        // erase,swap,size,empty  are same as above
+        //  erase,swap,size,empty  are same as above
     }
 }
+// map log(n)
+// multi map
+void explainMultimap()
+{
+    // everything same as map only it can store multiple  keys
+    // only mpp[key] cannot be used there  //{1,2} ,{1,3}
+}
+
+void explainUnorderedMap()
+{
+    // same as set  and unordered_set  difference
+    // unique
+    // it most of cases the time would be constant . That would be 0(1).
+}
+
+// Time to learn some algorithms.
+//              SORTING
+
+// if a = {1,5,3,2} a array of size four
+// and if we want to sort it
+// syntax is [start,end)     eg:  sort(a,a+5)
+// after that it will get sorted
+
+// we can sort any container except map.
+// if we want to sort in descending order, the syntax would be
+// sort(a,a+n,greater<int>)   here greater is inbuilt comparator
+
+// suppose if you want to sort in your own way then the syntax would be :
+//  sort(a,a+n,comp)  here comp is self defined boolean function
+
+// pair <int,int> a[ ] = {{1,2} , {2,1} , {4,1}}
+// Question is i have to sort this acc to second element, sort in inc.if same sec element then sort acc to first element in dec  order.
+// how to write comparator
+// bool comp(pair<int,int>)p1, pair<int,int>p2) {
+// if(p1.second <p2.second) return true ;
+// if(p1.second > p2.second) return false;
+// now condition is left when both are same
+// if (p1.first > p2.second) return true
+// return false //else
+// if false it will automaically swap numbers
+// }
+
+// some other cocnept left
+//  _builtn_popcount(); for changing in binary
+//  for max element :  *max_element(a,a+n);
